@@ -1,0 +1,116 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <div class="headerbg">
+          <ion-row>
+              <ion-col col-12>
+                <div class="logo">
+                  <img src="assets/imgs/logo.png" alt="logo">
+                </div>
+              </ion-col>
+            </ion-row>
+      </div>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content>
+
+    <div class="new-profile-content">
+        <div class="new-profile-content-padding">
+          <ion-row>
+            <ion-col col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7>
+              <div class="new-profile-image">
+                <!-- <ion-icon ios="ios-add" md="md-add"></ion-icon> -->
+                <img (click)="goToProfileUploadPage()" src="{{userProfileData.profilePicture}}" alt="profile_pic">
+              </div>
+            <div class="username">
+                <p>{{userDetails.username}}</p>
+            </div>
+            </ion-col>
+    
+            <ion-col col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5>
+              <div class="team-name">
+                <p>{{userProfileData.userTeams}}</p>
+              </div>
+            </ion-col>
+          </ion-row>
+    
+          <ion-row>
+            <ion-col>
+              <div class="new-profile-btns">
+                <ul>
+                  <li><a href="#" (click)="goTocommunityPage()">Add Friend</a></li>
+                  <li><a href="#" (click)="goToeditProfilePage()">Edit Profile</a></li>
+                </ul>
+              </div>
+            </ion-col>
+          </ion-row>
+    
+          <ion-row>
+            <ion-col>
+              <div class="profile-frient-count">
+                <ul>
+                  <li>
+                    <a href="#">Friends
+                      <span>{{userProfileData.userFriendsCount}}</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Points
+                      <span>{{userProfileData.getUserPointsRanks.likecount}}</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Rank
+                      <span>{{userProfileData.getUserPointsRanks.rank}}</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+            <div class="new-profile-challenage">
+              <p>Post a challenge<br> entry to see it here !</p>
+              <ion-icon name="arrow-round-down"></ion-icon>
+            </div>
+          </div>
+
+  <!-- <ion-grid>
+    <ion-row style="padding-top: 12px;">
+      <ion-col col-4 class="edit_profile_btn">
+        <button ion-button>Edit<br> Profile</button> 
+      </ion-col>
+      <ion-col col-4 class="profile_pic">
+       (click)="openModal({charNum: 0})"
+        <span class="span_profle_pic" (click)="Profileupload()"><img src="{{userProfileData.profilePicture}}" alt="profile_pic"></span>
+        <span class="span_profle_pic_txt">Username</span>
+      </ion-col>
+      <ion-col col-4 class="setting_icons">
+          <ion-icon ios="ios-settings" md="md-settings"></ion-icon><br>
+          <ion-icon ios="ios-person-add" md="md-person-add" (click)="goTocommunityPage()"></ion-icon>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 class="friends_votting_list">
+         <strong>
+           Friends
+           <b>0</b>
+         </strong>
+      </ion-col>
+      <ion-col col-6 class="friends_votting_list">
+        <strong>
+          Votes
+          <b>0</b>
+        </strong>
+      </ion-col>
+    </ion-row>
+  </ion-grid>   -->
+</ion-content>
+
+<page-footer></page-footer>

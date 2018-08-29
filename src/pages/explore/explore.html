@@ -1,0 +1,87 @@
+<!--
+  Generated template for the ExplorePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <div class="headerbg">
+        <ion-row>
+          <ion-col col-12>
+            <div class="logo">
+              <img src="assets/imgs/logo.png" alt="logo">
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+    <div class="explorepage">
+        <ion-segment [(ngModel)]="explore">
+          <ion-segment-button value="exploresfc">
+            SFC
+          </ion-segment-button>
+          <ion-segment-button value="explorebonus">
+            BONUS
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+      <div [ngSwitch]="explore">
+        <ion-list *ngSwitchCase="'exploresfc'">
+          <div class="challengelist exter">
+            <ul>
+                <ion-scroll scrollX="true" class="item_scroll_auto" style="height:112px" >
+                    <ion-row nowrap class="headerChip">
+              <button *ngFor="let teamdatalist of teamdataSet" ion-button (click)="getteamsdata(teamdatalist.id,teamdatalist.team_name)">
+                <img *ngIf="teamdatalist.team_name == 'For You'" src="assets/imgs/teams2.png" alt="teams">
+                <p>{{teamdatalist.team_name}}</p>
+              </button>
+            </ion-row>
+          </ion-scroll>
+            </ul>
+          </div>
+          <div class="videophoto">
+            <ul>
+    
+              <li *ngFor="let exploredatalist of exploredataSet">
+                <video controls *ngIf="exploredatalist.type == 'Video'">
+                  <source src="{{exploredatalist.media}}" type="video/mp4">
+                </video>
+                <img *ngIf="exploredatalist.type == 'Image'" src="{{exploredatalist.media}}">
+              </li>
+    
+            </ul>
+          </div>
+        </ion-list>
+        <ion-list *ngSwitchCase="'explorebonus'">
+            <div class="challengelist exter">
+                <ul>
+                    <ion-scroll scrollX="true" class="item_scroll_auto" style="height:112px" >
+                        <ion-row nowrap class="headerChip">
+                  <button *ngFor="let gamedatalist of gamedataSet" ion-button (click)="getgamesdata(gamedatalist.id)">
+                    <img *ngIf="gamedatalist.game_name == 'For You'" src="assets/imgs/teams2.png" alt="teams">
+                    <p>{{gamedatalist.game_name}}</p>
+                  </button>
+                </ion-row>
+              </ion-scroll>
+                </ul>
+              </div>
+          <div class="videophoto">
+            <ul>
+                <li *ngFor="let exploregamedatalist of exploregamedataSet">
+                    <video controls *ngIf="exploregamedatalist.type == 'Video'">
+                      <source src="{{exploregamedatalist.media}}" type="video/mp4">
+                    </video>
+                    <img *ngIf="exploregamedatalist.type == 'Image'" src="{{exploregamedatalist.media}}">
+                  </li>
+            </ul>
+          </div>
+        </ion-list>
+      </div>
+</ion-content>
+
+<page-footer></page-footer>

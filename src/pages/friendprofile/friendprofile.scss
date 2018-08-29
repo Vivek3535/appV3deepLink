@@ -1,0 +1,35 @@
+page-friendprofile {
+    .toolbar{padding:0; position: relative; height: 67px;}
+    .headerbg{ background: #183e6f;  padding: 5px; position: absolute;top: 0;left: 0; right: 0;}
+    .headerbg .logo { width: 80px; margin: auto; text-align: center;}
+    .new-profile-content{padding: 16px 0 16px 16px; overflow: hidden;}
+    .new-profile{width: 60%; float: left; display: inline-flex;}
+    .new-profile img { width: 60px;  height: 60px;  border-radius: 100%; margin-right: 10px;} 
+    .new-profile span{color: #183e6f; margin-top: 15px;}
+    .team-name{width:40%; float: right;  border-left: 2px solid #183e6f; padding: 10px 0 10px 10px; margin-top: 4px;}
+    .team-name p {font-size: 13px; background: #eaeaea; color: #183e6f; padding:6px; margin: 0; border-radius: 10px 0px 0px 10px; }
+    .profile-frient-count{margin: 16px;}
+    .profile-frient-count ul { padding: 0;  list-style: none; text-align: center; margin: 0;} 
+    .profile-frient-count ul li{display: inline-block; margin:0 8%;}
+    .profile-frient-count ul li a { font-size: 15px; text-decoration: none; color: #143f76;}  
+    .profile-frient-count ul li a span { display: block; font-weight: bold; font-size: 16px;}  
+    .bio{margin:0 16px; overflow: hidden;}
+    .bio p{width: 60%; float: left; margin: 5px 0px 0px; color: #183e6f; font-size: 14px;}
+    .bio .right{width:40%; float: right; text-align: right;}
+    .bio .right .button{margin: 0; height: 2.5rem; font-size: 13px; text-transform: none; background-color: #f26827; border-radius: 5px; box-shadow: none; font-weight:normal;}
+    .videophoto{text-align: center; margin-top: 15px;}
+    .videophoto ul{margin: 0; padding: 0; list-style: none;}
+    .videophoto ul li{width: 32%; display: inline-block; font-size: 0; background: #183e6f; margin: 1px;}
+    .videophoto ul li video, .videophoto ul li img{width: 100%; height: 80px;}
+    .scroll-content{margin-bottom: 45px !important;}
+    .footer:before{background-image: none !important;}
+    .footer .toolbar{min-height: 54px;}
+    .footer .toolbar-background{border: none !important; background: transparent;}
+    .footer ul {padding: 0; list-style: none; text-align: center;  margin: 0; border-top: 1px solid #c6c6c6; background: #fff;}
+    .footer ul li{margin: 0px 5%; display: inline-block;}
+    .footer ul li a img{width: 24px; }
+    .footer ul li:last-child{margin-right: 0;}
+    .footer .footer-logo {margin-top: -10px; }
+    .footer .footer-logo a img{width: 42px;} 
+
+}

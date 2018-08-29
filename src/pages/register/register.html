@@ -1,0 +1,56 @@
+<ion-content>
+  <div class="headerbg">
+    <ion-row class="top-icons">
+      <ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6>
+          <button ion-button icon-left (click)="backtomain()"> 
+            <ion-icon name="arrow-back"></ion-icon>
+              
+            </button>
+            
+      </ion-col>
+
+      <ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6>
+        <p text-right (click)="loginPage()">Login</p>
+      </ion-col>
+    </ion-row>
+    <img text-center src="assets/imgs/img_logo.png" alt="logo">
+  </div>
+ 
+  <div class="graybg">
+
+    <div class="reg-form">
+      <ion-list>
+        <h3 text-center>Create Account</h3>
+        <hr>
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="userData.name" placeholder="Enter Name"></ion-input> 
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="userData.username" placeholder="Enter User Name"></ion-input> 
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="userData.email" placeholder="Enter Email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="password" [(ngModel)]="userData.password" placeholder="Enter Password"></ion-input>
+        </ion-item>
+
+		<ion-item>
+          <ion-input type="text" [(ngModel)]="userData.dob" placeholder="Enter Birth Day"></ion-input>
+        </ion-item>
+		
+		<ion-item>
+          <ion-input type="text" [(ngModel)]="userData.city" placeholder="Enter City/State"></ion-input>
+        </ion-item>
+      </ion-list>
+  
+    </div>
+    <div text-center>
+      <button ion-button class="redbtn" (click)="signup()">Sign up</button>
+    </div>
+
+  </div>
+</ion-content>

@@ -1,0 +1,47 @@
+<!--
+  Generated template for the FanrankingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <div class="headerbg">
+        <ion-row>
+            <ion-col col-12>
+              <div class="logo">
+                <img src="assets/imgs/logo.png" alt="logo">
+              </div>
+            </ion-col>
+          </ion-row>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="fanranking-contant">
+     <div class="fanranking-search">
+        <ion-searchbar (ionInput)="filterTechnologies($event.target.value)" placeholder="Search for specific player"></ion-searchbar>
+     </div>
+    <div class="pagetitle">
+      <h2>FAN RANKING</h2>
+      SFC Overall Rankings</div>
+   </div>
+   <div class="ranking-table">
+      <div class="ranking-table-row" *ngFor="let fanrankingdatalist of fanrankingdataSet">
+        <ion-row>
+            <ion-col col-3><div class="rank-left"><h1>#{{fanrankingdatalist.rank}}</h1><p>{{fanrankingdatalist.likecount}}<span>Points</span></p></div></ion-col>
+            <ion-col col-6><div class="rank-mid">
+              <div class="rank-user"><img src="{{fanrankingdatalist.profilePicture}}" alt="{{fanrankingdatalist.username}}"></div>
+            <p>{{fanrankingdatalist.username}}</p>
+            </div>
+          </ion-col>
+            <ion-col col-3><div class="rank-right"><p>{{fanrankingdatalist.team_name}}</p></div></ion-col>
+        </ion-row>
+      </div>
+
+   </div>
+</ion-content>
+
+<page-footer></page-footer>

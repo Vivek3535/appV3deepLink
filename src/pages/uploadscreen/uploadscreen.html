@@ -1,0 +1,56 @@
+<!--
+  Generated template for the UploadscreenPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <div class="headerbg">
+      <ion-row>
+        <ion-col col-9>
+          <div class="logo">
+            <img src="assets/imgs/logo.png" alt="logo">
+          </div>
+        </ion-col>
+        <ion-col col-3>
+          <div class="right" (click)="postImageBtn()">Post</div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- <caption>
+    <ion-textarea placeholder="Caption" [(ngModel)]="userProfileData.postText">{{this.userProfileData.postText}}</ion-textarea>
+  </caption> -->
+
+
+  <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+		  <div class="pagetitle">POST YOUR CHALLENGE!</div>
+		<div class="uploadscreen-img">	
+		 <img src="assets/imgs/profile-player.png" alt="profile_pic">
+		</div> 
+        </ion-col>
+      </ion-row>
+    </ion-grid>	
+
+
+  <!-- <div class="challengevideo" *ngIf="userProfileData.postType!=''">
+    <video *ngIf="userProfileData.postType == 'Video'" controls >
+		<source src="{{userProfileData.postMedia}}#t=1" type="video/mp4">
+	</video>
+	<img *ngIf="userProfileData.postType == 'Image'" src="{{userProfileData.postMedia}}">
+  </div>
+  <div class="cameraicon"></div> -->
+</ion-content>
+<ion-footer>
+  <ul>
+    <li (click)="uploadPhoto()">Library</li>
+    <li (click)="uploadPostvideo()" class="active">Video</li>
+    <li (click)="takePhoto()">Photo</li>
+  </ul>
+</ion-footer>

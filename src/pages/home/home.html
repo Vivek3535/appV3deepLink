@@ -1,0 +1,131 @@
+<ion-header>
+  <ion-navbar>
+    <div class="headerbg">
+      <ion-row>
+        <!-- <ion-col col-3>
+          <div icon-left>
+              <ion-icon name="arrow-back"></ion-icon>
+          </div>
+        </ion-col> -->
+        <ion-col col-12>
+          <div class="logo">
+            <img src="assets/imgs/logo.png" (click)="goToSuperfanchallengebonusPage()" alt="logo">
+			<ion-icon ios="ios-notifications" (click)="goToNotificationPage()" md="md-notifications"></ion-icon>
+          </div>
+        </ion-col>
+        <!-- <ion-col col-3>
+            <div class="header-right">
+            </div>
+        </ion-col> -->
+      </ion-row>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+		<!-- <button ion-button block class="bluebtn" (click)="videoCaptureFn()">Video Capture</button> -->
+		<ion-row class="postToprow">
+        <span class="hme_profile_pic"><img src="{{userDetails.profilePicture}}" (click)="goToFriendprofilePage(userPostData.user_id)"></span>
+        <ion-textarea placeholder="Talk some smack..." [(ngModel)]="userProfileData.postText">{{this.userProfileData.postText}}</ion-textarea>
+        <span class="txt_ico">
+          <ion-icon ios="ios-videocam" md="md-videocam" (click)="uploadPostimgvideo()"> Library</ion-icon>
+          <ion-icon ios="ios-images" md="md-images" (click)="takePhoto()"> Photos</ion-icon>
+          <ion-icon ios="ios-send" md="md-send" (click)="createPost()">Post</ion-icon>
+        </span>
+        <div class="challengevideo" *ngIf="userProfileData.postType!=''">
+            <video *ngIf="userProfileData.postType == 'Video'" controls >
+            <source src="{{userProfileData.postMedia}}#t=1" type="video/mp4">
+          </video>
+          <img *ngIf="userProfileData.postType == 'Image'" src="{{userProfileData.postMedia}}">
+          </div>
+      </ion-row>
+  
+      <ion-row class="hme_postRow">
+          <div class="hmebox" *ngIf="userProfileData.latestPost">
+            <span class="hme_profile_pic"><img (click)="goToFriendprofilePage(userPostData.user_id)" src="{{userDetails.profilePicture}}"> <b class="hme_profile_pic_txt">{{userProfileData.userName}}</b></span> 
+            <div class="post_caption_txt">{{this.userProfileData.latestPost.description}}</div>
+            <div class="post_video_hme" (click)="goToOtherfanentryviewPage(userProfileData.latestPost.id)">
+              <video *ngIf="userProfileData.latestPost.type == 'Video'" preload="metadata" webkit-playsinline="webkit-playsinline" controls>
+                <source src="{{userProfileData.latestPost.media}}#t=1" type="video/mp4">
+              </video>
+              <img *ngIf="userProfileData.latestPost.type == 'Image'" src="{{userProfileData.latestPost.media}}">
+            </div>
+            <div class="comment">
+              {{userProfileData.latestPost.likes}}
+              <ion-icon ios="ios-thumbs-up" md="md-thumbs-up" name="like" (click)="likePhoto(userProfileData.latestPost.id)"></ion-icon>
+              {{userProfileData.latestPost.share}}
+              <ion-icon ios="ios-share-alt" md="md-share-alt" name="share" (click)="sharePhoto(userProfileData.latestPost.id)"></ion-icon>
+              <button ion-button clear small color="danger" icon-left (click)="sharePostImage()" style="color: #000; margin-top: -6px; margin-left: -6px;">
+                <ion-icon ios="ios-share" md="md-share"></ion-icon>
+              </button>
+              <!-- <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(photo.id,id)"></ion-icon> -->
+              <!-- <ion-icon ios="ios-share" md="md-share" (click)="shareInfo(userProfileData.latestPost.url)"></ion-icon> -->
+            </div>
+            <div class="commnt_input">
+              <ion-item>
+                <ion-input type="text" placeholder="Comment" #newComment (keyup.enter)="addComment(userProfileData.latestPost.id,newComment.value); newComment.value=''"
+                 (blur)="addComment(userProfileData.latestPost.id,newComment.value); newComment.value='' "></ion-input>
+              </ion-item>
+              <ion-icon ios="ios-send" md="md-send"></ion-icon>
+              <ul>
+                <li *ngFor="let comment of userProfileData.latestPost.comments">
+                  <div class="left"><img src="{{comment.profilepic}}" alt="status"></div>
+                  <div class="right">
+                    <h6>{{comment.name}} <ion-icon name="trash" class="deleteIcon" (click)="deletecomnt();"></ion-icon></h6>
+                    <p>{{comment.comment}}</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </ion-row>
+
+        <ion-row class="hme_triviaGameRow">
+            <span class="hme_profile_pic"><img src="{{userDetails.profilePicture}}"></span> <b class="hme_profile_pic_txt">Trivia Game</b>
+            <div class="boxtitle" [ngClass]="{'showboxtitle': userProfileData.gameStatus === 'Played' }"><p>{{userProfileData.gameMessage}}</p></div>
+			<div class="triviagameBgParent" [ngClass]="{'triviagamedisplay':   userProfileData.gameStatus === 'Played' }">
+				<div class="triviagameBg" *ngFor="let game of userProfileData.triviaGame; let i = index">
+				<div class="extra_earn">{{game.title}}</div>
+				<ion-list radio-group [(ngModel)]="autoManufacturers">        
+					<ion-item>
+					  <ion-label>{{game.option1}}</ion-label>
+					  <ion-radio value="{{game.option1}}" (ionSelect)="tvgAnswer(game.option1)"></ion-radio>
+					</ion-item>
+				  
+					<ion-item>
+					  <ion-label>{{game.option2}}</ion-label>
+					  <ion-radio value="{{game.option2}}" (ionSelect)="tvgAnswer(game.option2)"></ion-radio>
+					</ion-item>
+				  
+					<ion-item>
+					  <ion-label>{{game.option3}}</ion-label>
+					  <ion-radio value="{{game.option3}}" (ionSelect)="tvgAnswer(game.option3)"></ion-radio>
+					</ion-item>
+				  
+					<ion-item>
+					  <ion-label>{{game.option4}}</ion-label>
+					  <ion-radio value="{{game.option4}}" (ionSelect)="tvgAnswer(game.option4)"></ion-radio>
+					</ion-item>
+				  </ion-list>
+				  <div class="submit"><button ion-button (click)="submitGame()">Submit</button></div>
+				</div>
+			</div>
+		</ion-row>   
+
+    <button ion-button block class="bluebtn" (click)="videoCaptureFn()">Video Capture</button>
+  <!-- <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+	<button ion-button block class="bluebtn" (click)="loginPage()">Login</button>
+	<button ion-button block class="bluebtn" (click)="signupPage()">Signup</button>
+	<button ion-button block class="bluebtn" (click)="goToFavteamPage()">Favorite Team </button>
+	<button ion-button block class="bluebtn" (click)="goToProfilePage()">Profile</button>
+	<button ion-button block class="bluebtn" (click)="goToCommunityPage()">Community Page</button>
+	<button ion-button block class="bluebtn" (click)="goToSuperFanChallengePage()">Super Fan Challenge Page</button>
+	<button ion-button block class="bluebtn" (click)="goToSuperfanchallengebonusPage()">Super Fan Challenge Bonus Page</button>
+	<button ion-button block class="bluebtn" (click)="goToFriendprofilePage(12)">Friend Profile Page</button>
+	<button ion-button block class="bluebtn" (click)="goToOtherfanentryviewPage()">Other Fan Entry View Page</button>
+	<button ion-button block class="bluebtn" (click)="goToFanrankingPage()">Fan Ranking Page</button>
+  </p> -->
+</ion-content>
+
+<page-footer></page-footer>

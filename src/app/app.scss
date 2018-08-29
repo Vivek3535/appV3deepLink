@@ -1,0 +1,56 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.triviagameBg {
+    background: #ff6700;
+    color: #fff;
+    width: 100%;
+    margin: 16px 0;
+    padding: 0 16px;
+    padding-bottom: 16px;
+    border-radius: 5px;
+    .button-md {
+        background-color: #1b3c71;
+    }
+}
+
+ion-header .toolbar-background {
+    border-color: #b2b2b2;
+    background: #183e6f;
+}
+
+ion-header .back-button.show-back-button {
+    display: inline-block;
+    color: #fff !important;
+}
+
+.toolbar{padding:0;}
+.headerbg{ background: #183e6f;  padding: 5px;}
+.headerbg .logo { width: 80px; margin: auto; text-align: center;}
+.headerbg [icon-left] ion-icon{font-size: 36px; color: #fff; padding-top: 15px;}
+.headerbg button { background: transparent;  padding: 0; font-size: 14px;}
+.header-right {text-align: right;}
+
+.scroll-content{margin-bottom: 45px !important;}
+.footer:before{background-image: none !important;}
+.footer .toolbar{min-height: 54px;}
+.footer .toolbar-background{border: none !important; background: transparent;}
+.footer ul {padding: 0; list-style: none; text-align: center;  margin: 0; border-top: 1px solid #c6c6c6; background: #fff;}
+.footer ul li{margin: 0px 5%; display: inline-block;}
+.footer ul li a img{width: 24px; }
+.footer .footer-logo {margin-top: -10px; }
+.footer .footer-logo a img{width: 42px;} 

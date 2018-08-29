@@ -1,0 +1,44 @@
+page-editprofile {
+    ion-header {
+        ion-navbar {
+            .back-button {
+                display: none !important;
+            }
+            .headerbg {
+                button {
+                    box-shadow: none;
+                    font-size: 1.7rem;
+                    
+                }.button-md:hover:not(.disable-hover) {
+                    background: none;
+                }
+
+            }
+        }
+    }
+    .change-image-sec {
+        span {
+            display: block;
+            padding-top: 12px;
+        }
+    }
+    .toolbar{padding:0;}
+    .headerbg{ background: #183e6f;  padding: 5px;}
+    .headerbg .logo { width: 80px; margin: auto; text-align: center;}
+    .headerbg [icon-left] ion-icon{font-size: 36px; color: #fff; padding-top: 15px;}
+    .headerbg button { background: transparent;  padding: 0; font-size: 14px;}
+    .header-right {text-align: right;}
+    
+    
+    .change-image-sec{color: #183e6f; text-align: center; margin: 20px 0 10px;}
+    .change-image-sec p {font-size: 16px; margin-bottom: 8px;}
+    .change-img{width: 80px; height: 80px; overflow: hidden; border-radius: 100%; margin: 0 auto;}
+    .change-img img{width: 100%; height: 100%;}
+    .change-image-sec button{ font-size: 14px; background: transparent;  padding: 0; color: #183e6f; font-weight: normal; height: 2em;}
+    .change-profile-form{color: #183e6f; padding: 0 16px;}
+    .change-profile-form .item {padding-left: 0;  color: #183e6f; margin-bottom: 12px;}
+    .change-profile-form .item:first-child{border-top: none;}
+    .change-profile-form h4 { margin: 25px 0 20px;}
+    .change-profile-form  ion-label {font-size: 16px; }
+    .change-profile-form input {font-size: 14px;}
+}

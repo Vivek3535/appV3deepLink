@@ -1,0 +1,42 @@
+page-superfanchallenge {
+    .toolbar{padding:0; position: relative; height: 67px;}
+    .headerbg{ background: #183e6f;  padding: 5px; position: absolute;top: 0;left: 0; right: 0;}
+    .headerbg .logo { width: 80px; margin: auto; text-align: center;}
+    .headerbg [icon-left] ion-icon{font-size: 36px; color: #fff; padding-top: 15px;}
+    .pagetitle{background: #eee; text-align: center; font-size: 20px; color: #183e6f; padding: 10px; margin: 16px 0; font-weight: bold;}
+    .viewchallenge{margin: 10px; overflow: hidden;}
+    .viewchallenge .left{display: inline-flex; width: 65%; float: left;}
+    .viewchallenge .left img{width: 60px; height: 60px; border-radius: 50%; background: #183e6f; padding: 3px; position: relative; z-index:9;}
+    .viewchallenge .left span {position: relative; padding: 10px; color: #fff; font-size: 14px; background: #183e6f; display: inline-table;  margin-top: 11px;  margin-left: -8px;}
+    .viewchallenge .left span::before { content: ''; border-top:30px solid transparent;border-bottom: 30px solid transparent; border-left: 30px solid #183e6f; width: 0; height: 0; position: absolute; right: -30px;top: -10px;}
+    .viewchallenge .right{width: 35%; float: right; text-align: center; margin-top: 5px;}
+    .viewchallenge .right .button{background-color: #f26827; font-size: 14px;}
+    .videophoto{text-align: center; margin-top: 15px;}
+    .videophoto ul{margin: 0; padding: 0; list-style: none;}
+    .videophoto ul li{width: 32%; display: inline-block; font-size: 0; background: #183e6f; margin:2px; position:relative;}
+    .videophoto ul li video, .videophoto ul li img{width: 100%; height: 80px;}
+    .scroll-content{margin-bottom: 45px !important;}
+    .footer:before{background-image: none !important;}
+    .footer .toolbar{min-height: 54px;}
+    .footer .toolbar-background{border: none !important; background: transparent;}
+    .footer ul {padding: 0; list-style: none; text-align: center;  margin: 0; border-top: 1px solid #c6c6c6; background: #fff;}
+    .footer ul li{margin: 0px 5%; display: inline-block;}
+    .footer ul li a img{width: 24px;}
+    .footer ul li:last-child{margin-right: 0;}
+    .footer .footer-logo {margin-top: -10px; }
+    .footer .footer-logo a img{width: 42px;} 
+
+    .click-layer {position: absolute; width: 100%; height: 100%; background: transparent; z-index: 1; top: 0px;}
+	
+	.fan-challenge{background: url('../../assets/imgs/sfc-challenge-bg.png') no-repeat left top; background-size: 100% 100%; padding: 10px 0;}
+	.fan-challenge h3{text-align: center; font-size: 24px; color: #183e6f; text-transform: uppercase; margin: 0 0 15px 0;
+		 font-weight: normal;}
+	.button-sec h4{background: #f26827; color: #fff; display: inline-block; width: 80%; padding: 14px; text-align: center; font-weight: normal;}
+	.button-sec button{ background: #f26827; color: #fff; width: 80px; height: 80px; border-radius: 100%; 
+		font-size: 16px; line-height: 22px; margin: 0 0 0 -24px; box-shadow: 0px 2px 2px rgba(0,0,0,0.9)} 
+
+	.bonus-challenge{background:#183e6f;  padding: 10px 0; text-align: right;}
+	.bonus-challenge h3{text-align: center; font-size: 24px; color: #fff; text-transform: uppercase; margin: 0 0 15px 0;
+		font-weight: normal;}
+	.bonus-challenge .button-sec h4{margin-left: -25px;}
+}

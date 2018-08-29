@@ -1,0 +1,171 @@
+page-home {
+    font-family: Arial, Helvetica, sans-serif;
+    ion-header .show-back-button {
+        display: none !important;
+    }
+    .hme_profile_pic {
+        display: inline-flex;
+        img {
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+        }
+    }
+    .hme_profile_pic_txt {
+        display: inline-block;
+        color: #1b3c71;
+        padding: 13px;
+    }
+    .hme_postRow{
+        padding-bottom: 30px;
+    }
+    .postToprow {
+        padding-bottom: 30px;
+        textarea {
+            background: #eaeaea;
+            margin: 4px;
+            margin-left: 12px;
+            border-radius: 5px;
+            height: 40px;
+            padding-left: 12px;
+            padding-top: 10px;
+            font-size: 12px;
+        }
+        .txt_ico {
+            padding-top: 8px;
+            display: block;
+            width: 100%;
+            font-size: 12px;
+            padding-left: 56px;
+            ion-icon {
+                padding-right: 12px;
+            }
+        }
+    }
+    .hme_postRow {
+        .post_caption_txt {
+            width: 100%;
+            padding: 15px 5px;
+            color: #1b3c71;
+            font-size: 16px;
+        }
+        .post_video_hme {
+            width: 100%;
+            video {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+    .extra_earn {
+        width: 100%;
+        line-height: 26px;
+        padding: 16px 5px;
+    }
+    ion-list {
+        width: 100%;
+        .item-md {
+            padding-left: 18px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+    .challengevideo {
+        padding-left: 56px;
+        padding-top: 12px;
+        img, video {
+            width: 100px;
+        }
+    }
+    .post_video_hme {
+        img, video {
+            width: 100%;
+        }
+    }
+	.boxtitle{
+		width: 100%;
+		text-align: center;
+		margin-top:16px;
+		display:none;
+	}
+	.boxtitle p{
+		background-color: #f26827;
+		padding: 10px;
+		color: #fff;
+		font-size: 15px;
+		text-transform: uppercase;
+		border-radius: 5px; 
+	}
+	.showboxtitle{
+		display:block;
+	}
+	.triviagameBgParent{width:100%;}
+	.triviagamedisplay{opacity: 0.1; position: relative; z-index: -1;}
+	
+	.submit{text-align:center;}
+    .submit .button{background:#1b3c71;}
+    
+
+    .comment {
+        padding: 10px 0;
+    }
+    .comment .icon {
+        margin-right: 10px;
+    }
+    .hmebox {
+        width: 100%;
+    }
+    .commnt_input {
+        margin-bottom: 15px;
+        position: relative;
+    }
+    .commnt_input .item {
+        padding-left: 0;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    .commnt_input .icon {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        font-size: 20px;
+    }
+    .commnt_input ul{
+        margin: 0; 
+        padding: 0; 
+        list-style: none;
+        float: left; 
+        width: 100%;
+    }
+    .commnt_input ul li {
+        width: 100%;
+        float: left;
+        margin-bottom: 16px;
+    }
+    .commnt_input ul .left img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+    }
+    .commnt_input ul .left {
+        float: left;
+    }
+    .commnt_input ul .right{
+        float: right;
+        width: 85%;
+    }
+    .commnt_input ul .right h6{
+        position: relative;
+        color: #1b3c71;
+        padding-top: 13px;
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+    .commnt_input ul .right h6 .icon{
+        position: absolute; 
+        right: 0;
+        font-size: 20px;
+        color: #000;
+    }
+	
+}

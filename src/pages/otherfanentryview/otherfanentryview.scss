@@ -1,0 +1,115 @@
+page-otherfanentryview {
+
+    .toolbar{padding:0; position: relative; height: 67px;}
+    .headerbg{ background: #183e6f;  padding: 5px; position: absolute;top: 0;left: 0; right: 0;}
+    .headerbg .logo { width: 80px; margin: auto; text-align: center;}
+    .headerbg [icon-left] ion-icon{font-size: 36px; color: #fff; padding-top: 15px;}
+    
+
+    .new-profile-content{padding: 16px 0 16px 16px; overflow: hidden;}
+    .new-profile{width: 60%; float: left; display: inline-flex;}
+    .new-profile img { width: 60px;  height: 60px;  border-radius: 100%; margin-right: 10px;} 
+    .new-profile span{color: #183e6f; margin-top: 15px;}
+    .team-name{width:40%; float: right;  border-left: 2px solid #183e6f; padding: 10px 0 10px 10px; margin-top: 4px;}
+    .team-name p {font-size: 13px; background: #eaeaea; color: #183e6f; padding:6px; margin: 0; border-radius: 10px 0px 0px 10px;} 
+    .bio{margin: 0 16px; overflow: hidden;}
+    .bio p{width: 60%; float: left; margin: 5px 0px 0px; color: #183e6f; font-size: 14px;}
+    .bio .right{width:40%; float: right; text-align: right;}
+
+
+     .friend-challenge video { width: 100%;}
+     .friend-challenge p {padding-left: 10px; color: #183e6f; margin-bottom: 6px;  font-size: 15px;}
+     .info{padding: 10px;}
+     .info ul{margin: 0; padding: 0; list-style: none;}
+     .info ul li{display: inline-block; margin: 10px 6px; font-size: 18px; cursor: pointer; vertical-align: middle;}
+     .info ul li.comment-icon img {width: 18px;}
+     .info ul li:last-child {font-size: 14px; float: right; color: #183e6f; margin: 10px 0;}
+     .info h5{margin: 10px 0; font-size: 14px; color: #183e6f; font-weight: normal;}
+     .info h5 span{display: block; margin-top: 10px;}
+     caption {width: 100%; margin-bottom: 13px;}
+     caption ion-textarea{background: #f4f4f4; padding: 5px; border-radius: 5px;}
+     caption ion-textarea textarea.text-input{margin: 0px; }
+     .friend-challenge-postbtn { text-align: right; padding-right: 10px; margin-bottom: 15px;}
+     .friend-challenge-postbtn .button{margin:0; font-size: 13px; text-transform: none; background-color: #f26827; border-radius: 5px;
+        box-shadow: none; font-weight:normal; padding: 8px;}
+
+    .scroll-content{margin-bottom: 45px !important;}
+    .footer:before{background-image: none !important;}
+    .footer .toolbar{min-height: 54px;}
+    .footer .toolbar-background{border: none !important; background: transparent;}
+    .footer ul {padding: 0; list-style: none; text-align: center;  margin: 0; border-top: 1px solid #c6c6c6; background: #fff;}
+    .footer ul li{margin: 0px 5%; display: inline-block;}
+    .footer ul li a img{width: 24px; }
+    .footer .footer-logo {margin-top: -10px; }
+    .footer .footer-logo a img{width: 42px;} 
+	
+	.friend-challenge{
+		padding: 0 16px;
+	}
+	.friend-challenge img{
+		width:100%;
+	}
+	.comment {
+        padding: 10px 0;
+    }
+    .comment .icon {
+        margin-right: 10px;
+    }
+    .hmebox {
+        width: 100%;
+		padding: 0px 16px 16px;
+    }
+    .commnt_input {
+        margin-bottom: 15px;
+        position: relative;
+    }
+    .commnt_input .item {
+        padding-left: 0;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    .commnt_input .icon {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        font-size: 20px;
+    }
+    .commnt_input ul{
+        margin: 0; 
+        padding: 0; 
+        list-style: none;
+        float: left; 
+        width: 100%;
+    }
+    .commnt_input ul li {
+        margin-bottom: 16px;
+        float: left;
+        width: 100%;
+    }
+    .commnt_input ul .left img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+    }
+    .commnt_input ul .left {
+        float: left;
+    }
+    .commnt_input ul .right{
+        float: right;
+        width: 85%;
+    }
+    .commnt_input ul .right h6{
+        position: relative;
+        color: #1b3c71;
+        padding-top: 13px;
+        font-weight: bold;
+        font-size: 1.4rem;
+		margin-top: 0;
+    }
+    .commnt_input ul .right h6 .icon{
+        position: absolute; 
+        right: 0;
+        font-size: 20px;
+        color: #000;
+    }
+}

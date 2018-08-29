@@ -1,0 +1,92 @@
+<!--
+  Generated template for the OtherfanentryviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <div class="headerbg">
+        <ion-row>
+            <ion-col col-12>
+              <div class="logo">
+                <img src="assets/imgs/logo.png" alt="logo">
+              </div>
+            </ion-col>
+          </ion-row>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="new-profile-content">
+    <div class="new-profile">
+      <img src="{{singlePostData.profilePicture}}" (click)="goToFriendprofilePage(singlePostData.userId)" alt="profile-user">
+      <span>{{singlePostData.userName}}</span>
+    </div>
+    <div class="team-name">
+      <p>{{singlePostData.teamName}}</p>
+    </div>
+  </div>
+  
+  <div class="friend-challenge">
+    <p>{{singlePostData.challenge_type}}</p>
+  <video *ngIf="singlePostData.type == 'Video'" controls>
+    <source src="{{singlePostData.media}}" type="video/mp4">
+  </video>
+  <img *ngIf="singlePostData.type == 'Image'" src="{{singlePostData.media}}">
+  </div>
+<div class="hmebox">
+  <div class="comment">
+    {{singlePostData.likes}}
+    <ion-icon ios="ios-thumbs-up" md="md-thumbs-up" name="like" (click)="likePhoto(fabentryPostData.post_id)"></ion-icon>
+    {{singlePostData.share}}
+    <ion-icon ios="ios-share-alt" md="md-share-alt" name="share" (click)="sharePhoto(fabentryPostData.post_id)"></ion-icon>
+    <!-- <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(photo.id,id)"></ion-icon> -->
+    <!-- <ion-icon ios="ios-share" md="md-share" (click)="shareInfo(userProfileData.latestPost.url)"></ion-icon> -->
+  </div>
+  
+  <div class="commnt_input">
+    <ion-item>
+      <ion-input type="text" placeholder="Comment" #newComment (keyup.enter)="addComment(fabentryPostData.post_id,newComment.value); newComment.value=''"
+       (blur)="addComment(fabentryPostData.post_id,newComment.value); newComment.value='' "></ion-input>
+    </ion-item>
+    <ion-icon ios="ios-send" md="md-send"></ion-icon>
+    <ul>
+      <li *ngFor="let comment of singlePostData.comments">
+        <div class="left"><img src="{{comment.profilepic}}" alt="Profile"></div>
+        <div class="right">
+          <h6>{{comment.name}} <ion-icon name="trash" class="deleteIcon" (click)="deletecomnt();"></ion-icon></h6>
+          <p>{{comment.comment}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- <div class="info">
+      <caption>
+          <ion-textarea placeholder="Caption"></ion-textarea>
+      </caption>
+      <ul>
+        <li>
+          <ion-icon name="heart"></ion-icon>
+        </li>
+        <li class="comment-icon">
+            <img src="assets/imgs/comment-icon.svg" alt="comment-icon">
+        </li>
+        <li>
+            <ion-icon name="share-alt"></ion-icon>
+        </li>
+        <li>share - <span class="share-link">https://sfcfriend.com</span></li>
+      </ul>
+      <h5>View all 3 comments<span>July 4</span></h5> 
+  </div> -->
+
+  <div class="friend-challenge-postbtn">
+    <button ion-button (click)="goToSuperfanchallengePage()">Post Your Entry</button>
+  </div>
+</div>
+
+</ion-content>
+
+<page-footer></page-footer>

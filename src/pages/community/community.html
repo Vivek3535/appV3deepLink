@@ -1,0 +1,47 @@
+<!--
+  Generated template for the CommunityPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <div class="headerbg">
+      <ion-row>
+        <!-- <ion-col col-3>
+          <div icon-left>
+            <ion-icon name="arrow-back"></ion-icon>
+          </div>
+        </ion-col> -->
+        <ion-col col-12>
+          <div class="logo">
+            <img src="assets/imgs/logo.png" alt="logo">
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="searchbarbox">
+    <ion-searchbar type="text" (ionInput)="filterTechnologies($event.target.value)" placeholder="Search by Name and Team"></ion-searchbar>
+  </div>
+  <div class="usersListBtn">
+	<div class="pagetitle">Build your SFC Community!</div>
+	<div class="addfriends"><button ion-button (click)="showAddFriends()">Add Friends</button></div>
+  </div>	
+  <div class="searchbarlist opacityclass">
+    <ul>
+      <li *ngFor="let user of users">
+        <div class="left">
+          <img src="{{user.image}}" alt="{{user.name}}">
+          <span>{{user.name}}</span>
+        </div>
+        <div class="right" *ngIf="user.checked !='true'" (click)="addFriend(user.id)"><ion-icon name="person-add"></ion-icon></div>
+      </li>
+    </ul>
+  </div>
+</ion-content>
+
+<page-footer></page-footer>
